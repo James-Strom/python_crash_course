@@ -36,11 +36,65 @@ for value in range(1, 11):
 print(multiples)
 
 #4-8
-#cubes = list(range(1, 11, **3))
-#print(cubes)
-
-#4-9
 cubes = []
 for cube in range(1, 11):
 	cubes.append(cube**3)
 print(cubes)
+
+#4-9
+cubes = [value**3 for value in range(1, 11)]
+print(cubes)
+
+#4-10
+pizzas = ['pepperoni', 'something meaty', 'meat supreme','chicken','hawaian','margherita']
+print(f"The first 3 items are: ")
+for pizza in pizzas [:3]:
+	print(f"\t{pizza}")
+print(f"The middle 3 items are:")
+for pizza in pizzas[2:5]:
+	print(f"\t{pizza}")
+print(f"The last 3 items are:")
+for pizza in pizzas[3:]:
+	print(f"\t{pizza}")
+print("I love pizza!!!")
+
+#4-11
+my_pizzas =  ['pepperoni', 'something meaty', 'meat supreme']
+friend_pizzas = my_pizzas[:]
+my_pizzas.append('chicken')
+friend_pizzas.append('hawaian')
+print(friend_pizzas)
+print(my_pizzas)
+print(f"My favorite pizzas are:")
+for pizza in my_pizzas:
+	print(f"\t{pizza.title()}")
+print(f"My friend's favourite pizzas are:")
+for pizza in friend_pizzas:
+	print(f"\t{pizza.title()}")
+
+#4-12
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+print("My favorite foods are:")
+for food in my_foods:
+	print(f"\t{food}")
+
+#copying our list
+print("\nMy friend's favorite foods are:")
+for food in friend_foods:
+	print(f"\t{food}")
+
+#4-13
+buffets = ('chicken', 'salad', 'veg', 'pasta', 'steak')
+for buffet in buffets:
+	print(buffet)
+#buffets.append('juice')
+buffets = ('pizza', 'ice cream', 'veg', 'pasta', 'steak')
+print("\nNew Buffet")
+for buffet in buffets:
+	print(buffet)
+	
+#4-14
+#read through PEP 8
+
+#4-15
