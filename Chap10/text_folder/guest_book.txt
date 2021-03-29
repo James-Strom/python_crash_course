@@ -1,0 +1,3 @@
+james
+Bob
+& C:/Users/james/AppData/Local/Programs/Python/Python39/python.exe "c:/Computer Files/Code College/Python/Python Main/Python Crash Course/Chap10/TryitYourselfChap10.py"
