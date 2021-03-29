@@ -71,25 +71,25 @@
 # print(nona_lina.number_served)
 
 # 9-5
-class Users:
-    def __init__(self,first_name,last_name,email,password):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email = email
-        self.password = password
-        self.login_attempts = 0
+# class Users:
+#     def __init__(self,first_name,last_name,email,password):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.email = email
+#         self.password = password
+#         self.login_attempts = 0
 
-    def describe_user(self):
-        print(f"First name: {self.first_name}\nLast Name: {self.last_name}\nEmail: {self.email}\n")
+#     def describe_user(self):
+#         print(f"First name: {self.first_name}\nLast Name: {self.last_name}\nEmail: {self.email}\n")
 
-    def greet_user(self):
-        print(f"Hello {self.first_name}.\nWelcome back!!")
+#     def greet_user(self):
+#         print(f"Hello {self.first_name}.\nWelcome back!!")
     
-    def increment_login_attempts(self):
-        self.login_attempts += 1
+#     def increment_login_attempts(self):
+#         self.login_attempts += 1
 
-    def reset_login_attempts(self):
-        self.login_attempts = 0
+#     def reset_login_attempts(self):
+#         self.login_attempts = 0
 
 # james = Users("James", "Stromnes", "js@CC.com", "1234")
 # james.increment_login_attempts()	
@@ -137,19 +137,19 @@ class Users:
 
 # 9-8 (9-5 must be uncommented)
 
-class Admin(Users):		
-	def __init__(self, first_name, last_name, email, password):
-		super().__init__(first_name, last_name, email, password)
-		self.privileges = Privileges()
+# class Admin(Users):		
+# 	def __init__(self, first_name, last_name, email, password):
+# 		super().__init__(first_name, last_name, email, password)
+# 		self.privileges = Privileges()
 
 	
 
-class Privileges:
-	def __init__(self):
-		self.privileges = ["can add post", "can delete post", "can ban user"]
+# class Privileges:
+# 	def __init__(self):
+# 		self.privileges = ["can add post", "can delete post", "can ban user"]
 
-	def show_privileges(self):
-		print(self.privileges)	
+# 	def show_privileges(self):
+# 		print(self.privileges)	
 
 
 # james = Admin('James', 'Stromnes', 'js@CC.com', '1234')
@@ -274,25 +274,23 @@ class Privileges:
 # print(twen.roll_die())
 # print(f"{twen.roll_die()} last 20 die\n")
 
-# 9-14(incomplete)
-from random import choices
+# 9-14
+# import random
 
-lotto_list =['a','b','c','d','e','1','2','3','4','5','6','7','8','9','10']
-lotto_nums = []
-my_nums = ['b','1','2','6']
-lotto_num = 0
-
-while lotto_num < 4:
-    lotto_nums.append(choice(lotto_list)):
-        lotto_num +=1
-    return
-
-if lotto_nums == my_nums:
-    print("I have won!!")
-else:
-    print(f"Lotto numbers were: {lotto_nums}\n")
-    print(f"My numbers were: {my_nums}")
-
+# lotto_list =['a','b','c','d','e','1','2','3','4','5','6','7','8','9','10']
+# print(random.choices(lotto_list, k=4))
 
 # 9-15
-# 9-16
+import random 
+
+lotto_list =['a','b','c','d','e','1','2','3','4','5','6','7','8','9','10']
+my_ticket = ['b', '1', '2', '3']
+my_ticket.sort()
+lotto_times = 0
+lotto_num = []
+while my_ticket != lotto_num:
+    lotto_num = random.choices(lotto_list, k=4)
+    lotto_num.sort()
+    print(lotto_num)
+    lotto_times += 1
+print(f"You Won! on the {lotto_times} time")
